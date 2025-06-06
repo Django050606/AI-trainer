@@ -39,9 +39,8 @@ export default defineSchema({
         })
       ),
     }),
-    isActive: v.boolean(), 
+    isActive: v.boolean(),
   })
     .index("by_user_id", ["userId"])
     .index("by_active", ["isActive"]),
-    
 });
