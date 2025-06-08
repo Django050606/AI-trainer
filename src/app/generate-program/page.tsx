@@ -132,13 +132,17 @@ const GenerateProgramPage = () => {
           ? `${user.firstName} ${user.lastName || ""}`.trim()
           : "There";
 
-        await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, { //тут откоментил ес че
+        await vapi.start(
+        undefined,
+        undefined, // to access directly to workflow, not assistant
+        undefined,
+        process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID, { 
           variableValues: {
             full_name: fullName,
-            user_id: user?.id,
+            user_id: user?.id,    //тут отменил
           }
         });
-      await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!);
+      await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID);
       } catch (error) {
         console.log("Failed to start call", error);
         setConnecting(false);
