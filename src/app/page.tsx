@@ -39,23 +39,7 @@ const HomePage = () => {
                 designed just for you
               </p>
 
-              {/* STATS */}
-              <div className="flex items-center gap-10 py-6 font-mono">
-                <div className="flex flex-col">
-                  <div className="text-2xl text-primary">500+</div>
-                  <div className="text-xs uppercase tracking-wider">ACTIVE USERS</div>
-                </div>
-                <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent"></div>
-                <div className="flex flex-col">
-                  <div className="text-2xl text-primary">3min</div>
-                  <div className="text-xs uppercase tracking-wider">GENERATION</div>
-                </div>
-                <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent"></div>
-                <div className="flex flex-col">
-                  <div className="text-2xl text-primary">100%</div>
-                  <div className="text-xs uppercase tracking-wider">PERSONALIZED</div>
-                </div>
-              </div>
+            
 
               {/* BUTTON */}
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
